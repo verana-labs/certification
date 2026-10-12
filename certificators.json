@@ -1,0 +1,29 @@
+{
+  "updated": "2026-10-12",
+  "certificators": [
+    {
+      "slug": "2060",
+      "name": "2060 OÜ",
+      "status": "launch",
+      "website": "https://2060.io",
+      "contact": "certification@2060.io",
+      "country": "EE",
+      "regions": ["Europe", "Latin America", "Remote worldwide"],
+      "languages": ["en", "es", "fr"],
+      "tracks": ["developer-integrator", "infrastructure-engineer", "solutions-consultant", "pre-sales"],
+      "about": "Steward of the Verana Foundation (in formation) and maintainer of VS Agent, the Verana Playground and the network tooling. Delivers workshops remotely and on site."
+    },
+    {
+      "slug": "mobiera",
+      "name": "Mobiera",
+      "status": "launch",
+      "website": "https://mobiera.com",
+      "contact": "certification@mobiera.com",
+      "country": "CO",
+      "regions": ["Latin America"],
+      "languages": ["es", "en"],
+      "tracks": ["developer-integrator", "infrastructure-engineer", "solutions-consultant", "pre-sales"],
+      "about": "Integrator and training partner for Latin America, co-lead of the Showcase and Certification Working Group. Delivers workshops in Spanish, on site in Colombia and remotely across the region."
+    }
+  ]
+}

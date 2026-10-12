@@ -1,0 +1,77 @@
+{
+  "name": "Verana Certification Program",
+  "version": "2026.1",
+  "status": "draft",
+  "protocol": {
+    "verifiableTrust": "v4",
+    "verifiablePublicRegistry": "v4",
+    "network": "testnet"
+  },
+  "policy": "certification-policy-v1",
+  "levels": [
+    {
+      "level": 1,
+      "name": "Verana Certified Associate",
+      "subtitle": "Fundamentals",
+      "how": "Self-study of the open material and an online knowledge exam on veranafoundation.org. No certificator involved. Free until the end of 2027.",
+      "validityYears": 2
+    },
+    {
+      "level": 2,
+      "name": "Verana Certified Professional",
+      "subtitle": "In a role track",
+      "how": "The modules of a track: a proctored knowledge exam administered by the Foundation and a practical lab or case study graded by an Authorized Certificator. Workshops are optional.",
+      "validityYears": 2
+    },
+    {
+      "level": 3,
+      "name": "Verana Certified Expert",
+      "subtitle": "In a role track",
+      "how": "Level 2 held for a year, a portfolio of real deployments or engagements, and an oral defense before two Certified Instructors from two certificators. Opens with a later program version.",
+      "validityYears": 2
+    }
+  ],
+  "modules": [
+    { "code": "C1", "title": "Verifiable Trust fundamentals", "hours": 4, "assessment": "exam", "status": "published", "group": "core", "summary": "The problem Verifiable Trust solves, Verifiable Services and User Agents, the Essential Credential Schemas, the three questions and trust resolution." },
+    { "code": "C2", "title": "The Verana Public Registry", "hours": 4, "assessment": "exam", "status": "published", "group": "core", "summary": "Corporations, Ecosystems, credential schemas, the participant tree, onboarding processes, sessions, fees and trust deposits." },
+    { "code": "C3", "title": "Ecosystem governance", "hours": 4, "assessment": "exam and case", "status": "outline", "group": "core", "summary": "Governance frameworks, roles, fees, revocation and slashing, and the economics of an ecosystem." },
+    { "code": "C4", "title": "Playground practicum", "hours": 3, "assessment": "lab", "status": "published", "group": "core", "summary": "Run the demos with a wallet, read a Proof-of-Trust, resolve a DID on the indexer, read a participant tree." },
+    { "code": "T1", "title": "VS Agent operations", "hours": 8, "assessment": "lab", "status": "outline", "group": "technical", "summary": "Deploy VS Agent with Docker Compose and Helm, did:webvh, ECS onboarding, the Admin API, upgrades and backups." },
+    { "code": "T2", "title": "Building verifiable services", "hours": 12, "assessment": "lab", "status": "outline", "group": "technical", "summary": "Issuance and verification on DIDComm and OpenID4VC, schemas and VTJSC, AnonCreds and SD-JWT, the MCP server." },
+    { "code": "T3", "title": "Wallet and user-agent integration", "hours": 8, "assessment": "lab", "status": "outline", "group": "technical", "summary": "The trust screen, gating accept and share, the Proof-of-Trust kit and the conformance harness." },
+    { "code": "T4", "title": "Ecosystem operations on chain", "hours": 8, "assessment": "lab", "status": "outline", "group": "technical", "summary": "Frontend and CLI, creating Ecosystems and schemas, participant management, keys and accounts, indexer and resolver APIs, TRQP." },
+    { "code": "T5", "title": "Network infrastructure", "hours": 6, "assessment": "lab", "status": "outline", "group": "technical", "summary": "Indexer, resolver, faucet, monitoring, and the boundary with what the Council governs." },
+    { "code": "T6", "title": "Security", "hours": 4, "assessment": "exam", "status": "outline", "group": "technical", "summary": "Key management, did:webvh log integrity, incident response, post-quantum roadmap." },
+    { "code": "T7", "title": "Verifiable AI agents", "hours": 4, "assessment": "exam and lab", "status": "outline", "group": "technical", "summary": "Agent identity, MCP, agent-to-service trust." },
+    { "code": "B1", "title": "Solution design", "hours": 8, "assessment": "case study", "status": "outline", "group": "business", "summary": "Mapping a use case to Ecosystems and schemas, with the Vesta, Verandia, CEXA and BHI patterns." },
+    { "code": "B2", "title": "Demonstration and pre-sales", "hours": 4, "assessment": "live demo", "status": "outline", "group": "business", "summary": "Delivering the playground story, handling objections, competitive positioning." },
+    { "code": "B3", "title": "Procurement and tenders", "hours": 6, "assessment": "case study", "status": "outline", "group": "business", "summary": "Writing and evaluating requirements, compliance matrices, public-sector alignment." },
+    { "code": "B4", "title": "Legal and compliance", "hours": 6, "assessment": "exam and case", "status": "outline", "group": "business", "summary": "eIDAS 2, GDPR and data minimization, liability in governance frameworks, licensing, token considerations." },
+    { "code": "B5", "title": "Economics", "hours": 4, "assessment": "exam", "status": "outline", "group": "business", "summary": "The VNA token, trust deposits, fee models, pricing an ecosystem." },
+    { "code": "B6", "title": "Running an ecosystem", "hours": 6, "assessment": "case study", "status": "outline", "group": "business", "summary": "Authoring a governance framework, onboarding operations, disputes, audits." },
+    { "code": "I1", "title": "Instructor module", "hours": 4, "assessment": "observed session", "status": "outline", "group": "instructor", "summary": "Delivering the official material, proctoring, grading rubrics." }
+  ],
+  "tracks": [
+    { "slug": "fundamentals", "name": "Fundamentals", "level": 1, "phase": 1, "core": ["C1", "C2", "C4"], "modules": [], "audience": "Anyone who needs to understand how Verifiable Trust works: product managers, analysts, partners, students.", "summary": "The core modules and one online exam. The entry point of the program and the prerequisite of every Level 2 track." },
+    { "slug": "developer-integrator", "name": "Developer and Integrator", "level": 2, "phase": 1, "core": ["C1", "C2", "C4"], "modules": ["T2", "T6"], "choice": [["T3", "T1"]], "audience": "Engineers building on VS Agent or integrating a wallet.", "summary": "Build and operate a verifiable service, or integrate a user agent, and prove it on the test network." },
+    { "slug": "infrastructure-engineer", "name": "Infrastructure Engineer", "level": 2, "phase": 1, "core": ["C1", "C2", "C4"], "modules": ["T1", "T5", "T6"], "audience": "Platform and operations engineers.", "summary": "Deploy, monitor and secure VS Agent and the network services around it." },
+    { "slug": "solutions-consultant", "name": "Solutions Consultant", "level": 2, "phase": 1, "core": ["C1", "C2", "C4"], "modules": ["C3", "B1", "B5", "B6"], "audience": "Architects and consultants designing deployments.", "summary": "Map a use case to Ecosystems, schemas, roles and fees, and defend the design." },
+    { "slug": "pre-sales", "name": "Pre-sales", "level": 2, "phase": 1, "core": ["C1", "C2", "C4"], "modules": ["B2"], "reduced": ["B1"], "audience": "Sales engineers and partner managers.", "summary": "Deliver the playground story live, answer objections, position Verana against alternatives." },
+    { "slug": "ecosystem-operator", "name": "Ecosystem Operator", "level": 2, "phase": 3, "core": ["C1", "C2", "C4"], "modules": ["C3", "T4", "B6"], "audience": "Staff of a governing body or registry operator.", "summary": "Create and run an Ecosystem on chain: governance framework, schemas, participants, fees, disputes." },
+    { "slug": "legal-compliance", "name": "Legal and Compliance", "level": 2, "phase": 3, "core": ["C1", "C2", "C4"], "modules": ["C3", "B4"], "audience": "Counsel, data protection and compliance officers.", "summary": "Governance frameworks as contracts, eIDAS 2 and GDPR alignment, liability and licensing." },
+    { "slug": "procurement-tenders", "name": "Procurement and Tenders", "level": 2, "phase": 3, "core": ["C1", "C2", "C4"], "modules": ["B3"], "reduced": ["B4"], "audience": "Buyers and bid teams.", "summary": "Write and evaluate requirements for Verifiable Trust deployments, build compliance matrices." },
+    { "slug": "wallet-provider", "name": "Wallet Provider", "level": 2, "phase": 3, "core": ["C1", "C2", "C4"], "modules": ["T3", "T6"], "audience": "Personal and business wallet teams.", "summary": "Make a wallet a Verifiable User Agent and pass the conformance harness." },
+    { "slug": "ai-agent-builder", "name": "AI Agent Builder", "level": 2, "phase": 4, "core": ["C1", "C2", "C4"], "modules": ["T7"], "reduced": ["T2"], "audience": "Teams shipping agents on Verana.", "summary": "Give an AI agent its own verifiable identity and let it trust and be trusted." }
+  ],
+  "trackRules": {
+    "core": "Modules every track requires.",
+    "modules": "Modules required in full, with their assessment.",
+    "choice": "Groups of modules of which one must be completed.",
+    "reduced": "Modules whose material is required reading and whose exam questions enter the track exam, without the module's practical assessment."
+  },
+  "designations": [
+    { "slug": "integrator", "name": "Verana Certified Integrator", "for": "Organizations that build products and services on Verana.", "membership": "contributor", "staff": [ { "count": 2, "tracks": ["developer-integrator"] }, { "count": 1, "tracks": ["infrastructure-engineer", "solutions-consultant"] } ], "evidence": [ "A verifiable service operated by the organization, live on a Verana network and passing the conformance checks designated by the curriculum.", "A documented support process." ] },
+    { "slug": "solution-provider", "name": "Verana Certified Solution Provider", "for": "Organizations that sell, resell or advise on Verana-based solutions.", "membership": "contributor", "staff": [ { "count": 1, "tracks": ["solutions-consultant"] }, { "count": 1, "tracks": ["pre-sales"] }, { "count": 1, "tracks": ["legal-compliance", "procurement-tenders"] } ], "evidence": [ "Two customer references, or one documented engagement reviewed by the certificator." ] },
+    { "slug": "operator", "name": "Verana Certified Operator", "for": "Organizations that run their own Ecosystem or verifiable services on Verana.", "membership": "contributor", "staff": [ { "count": 1, "tracks": ["ecosystem-operator"] }, { "count": 1, "tracks": ["infrastructure-engineer"] } ], "evidence": [ "A live Ecosystem or verifiable service operated by the organization.", "A published governance framework." ] }
+  ]
+}
