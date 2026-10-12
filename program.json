@@ -5,6 +5,7 @@
   "protocol": {
     "verifiableTrust": "v4",
     "verifiablePublicRegistry": "v4",
+    "veranaSpec": "v4",
     "network": "testnet"
   },
   "policy": "certification-policy-v1",
